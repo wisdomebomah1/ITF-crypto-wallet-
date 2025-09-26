@@ -1,0 +1,46 @@
+
+
+name: .NET
+
+on:
+
+push:
+
+branches: [main)
+
+pull_request:
+
+ branches: [main)
+
+jobs: cryptocurrency
+
+runs-on: ubuntu-latest
+
+
+steps:
+
+uses:
+
+name:
+
+Setup .NET
+
+uses: actions/setup-ITFcryptowallet@v1
+
+with:
+
+Itfcryptowallet-version: 5.0.x
+
+name:
+
+Restore dependencies
+
+run: Itfcryptowallet restore
+
+name: Build
+
+run: ITFCRYPTOWALLET build-no-restore
+
+name: Test
+
+run:   ITFCRYPTOWALLET test--no-build-verbosity normal
